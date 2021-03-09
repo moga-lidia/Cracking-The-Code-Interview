@@ -23,16 +23,20 @@ public class ArraysAndStrings4 {
     	}
     	return true;
     }
-    
-    //Varianta 2
-    public boolean isPermutationOfPalindrome1(String str) {
-    	int bit=0;
-    	for(char c:str.toCharArray())
-    		bit <<= Character.getNumericValue(c);
-    	int b=bit;
-    	bit -= 1;
-    	return ((bit&b)==0);
-    }
+//    
+//    //Varianta 2
+//    public boolean isPermutationOfPalindrome1(String str) {
+//    	int mask=0;
+//    	int bit=0;
+//    	for(char c:str.toCharArray()) {
+//    		mask <<= Character.getNumericValue(c);
+//    		if((bit&mask)==0)
+//    			bit |= mask;
+//    		else
+//    			bit &= ~mask;
+//    	}
+//    	return ((bit&(bit-1))==0);
+//    }
 }
 
 
